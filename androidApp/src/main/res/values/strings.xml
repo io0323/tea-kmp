@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tea APP</string>
+    <string name="common__ok">OK</string>
+    <string name="common__cancel">キャンセル</string>
+    <string name="common__add">追加</string>
+    <string name="common__confirm">確認する</string>
+    <string name="common__fix">修正する</string>
+    <string name="common__leave">退会する</string>
+    <string name="common__birth_format">yyyy年M月</string>
+    <string name="common__pay_switch">Lot\n切り替え</string>
+    <string name="common__gram">gram</string>
+    <string name="common__start">開始する</string>
+    <string name="common__close">閉じる</string>
+    <string name="common__next">次へ</string>
+    <string name="common__skip">スキップ</string>
+    <string name="common__password_forgot">パスワードをお忘れの方はこちらをご確認ください</string>
+    <string name="common__password_forgot_link">こちら</string>
+    <string name="common__email_form">メールアドレス</string>
+    <string name="common_login">ログイン</string>
+
+    <string name="screen__home">Home画面</string>
+    <string name="region_list__header_title">Lot一覧</string>
+    <string name="region_list__header_button_title">Lot削除</string>
+    <string name="region_list__code_button_title">指定Lotをお持ちの方</string>
+    <string name="region_list__count_unit">件</string>
+    <string name="region_list__checkbox_label">未登録のみ</string>
+    <string name="region_list__filter_label">絞り込み</string>
+    <string name="region_list__added_label">追加済み</string>
+    <string name="region_list__period_label">販売期間</string>
+    <string name="region_list__empty_region_label">表示できるLotがありません</string>
+    <string name="region_list__filter_dialog_title">@string/region_list__filter_label</string>
+    <string name="region_list__filter_dialog_clear">クリア</string>
+    <string name="region_list__filter_dialog_filtering">絞り込む</string>
+
+    <string name="region_detail__campaign_name">Lot名</string>
+    <string name="region_detail__coupon">%sLot</string>
+    <string name="region_detail__campaign_detail">Lot詳細</string>
+    <string name="region_detail__campaign_period">期間</string>
+    <string name="region_detail__campaign_period_start">%sから</string>
+    <string name="region_detail__campaign_period_end">%sの翌々日まで有効</string>
+    <string name="region_detail__point_expiration_date">Lot有効期限</string>
+    <string name="region_detail__location_setting">チェックイン日から</string>
+    <string name="region_detail__campaign_site">Lotサイト</string>
+    <string name="region_detail__tos">利用規約に同意する</string>
+
+    <string name="screen__region_details">Lot詳細</string>
+    <string name="screen__code_input">指定Lotで追加</string>
+    <string name="screen__notice_list">お知らせ一覧</string>
+    <string name="screen__notice_details">お知らせ詳細</string>
+    <string name="phone_number_input__header_title">アカウント作成</string>
+    <string name="phone_number_input__indicator_first">アカウント作成</string>
+    <string name="phone_number_input__indicator_second">アカウント認証</string>
+    <string name="phone_number_input__indicator_third">新規登録</string>
+    <string name="phone_number_input__sms_label">SMS(ショートメッセージサービス)を利用して承認を行います。</string>
+    <string name="phone_number_input__country_code">国番号</string>
+    <string name="phone_number_input__phone_label">電話番号</string>
+    <string name="phone_number_input__phone_hint">入力してください</string>
+    <string name="phone_number_input__password_label">パスワード</string>
+    <string name="phone_number_input__password_hint">入力してください</string>
+    <string name="phone_number_input__sms_not_received">SMSが届かない場合は こちら をご確認ください</string>
+    <string name="phone_number_input__password_description">パスワードは8文字以上にし、数字、大文字の英字、小文字の英字を全て含める必要があります。</string>
+    <string name="phone_number_input__terms_link">利用規約</string>
+    <string name="phone_number_input__privacy_link">プライバシーポリシー</string>
+    <string name="phone_number_input__link_suffix">に同意する</string>
+    <string name="phone_number_input__button_label">SMSに認証番号を送信</string>
+    <string name="phone_number_input__picker_button_label">選択</string>
+    <string name="phone_number_input__error_string_count">8文字以上で入力してください</string>
+    <string name="phone_number_input__error_password_contains_required">英大文字、英小文字、数字を含めて設定してください</string>
+    <string name="sms_code_input__header_title">アカウント認証</string>
+    <string name="sms_code_input__description">SMS(ショートメッセージサービス)宛に送られた6桁の数字を入力してください。</string>
+    <string name="sms_code_input__button_label">認証</string>
+    <string name="user_information_input__header_title">ユーザー作成</string>
+    <string name="user_information_input__description">登録情報を入力してください。</string>
+    <string name="user_information_input__birth">生年月</string>
+    <string name="user_information_input__required_label">必須</string>
+    <string name="user_information_input__birth_hint">選択してください</string>
+    <string name="user_information_input__gender">性別</string>
+    <string name="user_information_input__gender_hint">選択してください</string>
+    <string name="user_information_input__zip">郵便番号</string>
+    <string name="user_information_input__zip_hint">0000000</string>
+    <string name="user_information_input__address_button">住所を検索</string>
+    <string name="user_information_input__address">住所</string>
+    <string name="user_information_input__address_hint">入力してください</string>
+    <string name="user_information_input__button">登録</string>
+    <string name="login__header_title">ログイン</string>
+    <string name="login__phone_description">SMS(ショートメッセージサービス)を利用して認証を行います。</string>
+    <string name="login__email_description">メールアドレスを利用して認証を行います。</string>
+    <string name="login__phone">電話番号でログイン</string>
+    <string name="login__email">メールでログイン</string>
+    <string name="login__email_form_hint">入力してください</string>
+    <string name="login_sms__header_title">アカウント認証</string>
+    <string name="login_sms__phone_description">SMS(ショートメッセージサービス)宛に送られた6桁の数字を入力してください。</string>
+    <string name="login_sms__email_description">メールアドレス宛に送られた6桁の数字を入力してください。</string>
+    <string name="login_sms__button_label">認証</string>
+    <string name="login__error_password">電話番号とパスワードの組み合わせに問題があります。</string>
+    <string name="login__error_password_contains_required">パスワードは8文字以上にし、数字、大文字の英字、小文字の英字を全て含める必要があります</string>
+    <string name="login__error_string_count">8文字以上で入力してください</string>
+
+    <string name="screen__login_sms_code_input">SMS認証(ログイン)</string>
+    <string name="screen__login_email_code_input">メールアドレス認証(ログイン)</string>
+    <string name="screen__splash">スプラッシュ</string>
+    <string name="screen__walk_through_usage">ウォークスルー サービス説明</string>
+    <string name="screen__walk_through_permission">ウォークスルー 機能説明</string>
+    <string name="region_home__period">販売期間｜</string>
+    <string name="region_home__period_detail">詳細へ</string>
+    <string name="region_home__point_all_store">全店舗共通</string>
+    <string name="region_home__point_small_medium_store">中小店舗限定</string>
+    <string name="region_home__charge">登録</string>
+    <string name="region_home__payment">払い出し</string>
+    <string name="region_home__business_number">Lotを入力して払い出し</string>
+    <string name="region_home__notice_list">一覧を見る</string>
+    <string name="payment_qr_scan__header_title">払い出し</string>
+    <string name="payment_qr_scan__description">QRコードを読み取ってください</string>
+    <string name="payment_point_input__header_title">払い出しLot入力</string>
+    <string name="payment_point_input__button_label">次へ</string>
+    <string name="payment_point_input__available_point">利用可能Lot</string>
+    <string name="payment_point_confirm__header_title">払い出しLot提示</string>
+    <string name="payment_point_confirm__description">お店の方にこの画面をご提示ください</string>
+    <string name="payment_point_confirm__remaining">あと</string>
+    <string name="payment_point_confirm__modify_button">修正</string>
+    <string name="payment_point_confirm__fix_button">確定</string>
+    <string name="payment_complete__header_title">払い出し完了</string>
+    <string name="payment_complete__accept">受付</string>
+    <string name="payment_complete__payment_number">決済番号</string>
+    <string name="payment_complete__bottom_button">LotTOPに戻る</string>
+    <string name="screen__payment_qr_show">CPM決済</string>
+    <string name="charge_qr_scan__header_title">Lot</string>
+    <string name="charge_qr_scan__description">QRコードを読み取ってください</string>
+    <string name="charge_qr_scan__manually_title">QRコードを読み取れない方はこちら</string>
+    <string name="charge_qr_scan__manually_button">Lotコードを手入力</string>
+    <string name="screen__charge_code_input">Lotコード入力</string>
+    <string name="charge_code_confirm__header_title">Lot</string>
+    <string name="charge_code_confirm__description">LotするLotを確認して\n確定してください</string>
+    <string name="charge_code_confirm__point">獲得Lot</string>
+    <string name="charge_code_confirm__modify_button">修正</string>
+    <string name="charge_code_confirm__fix_button">確定</string>
+    <string name="charge_complete__header_title">Lot</string>
+    <string name="charge_complete__point">獲得Lot</string>
+    <string name="charge_complete__total">合計</string>
+    <string name="charge_complete__bottom_button">LotTOPに戻る</string>
+    <string name="screen__transaction_history">取引履歴</string>
+    <string name="screen__near_by_store">近くの使えるお店</string>
+    <string name="screen__drawer_menus">グローバルメニュー</string>
+    <string name="user_information__header_title">ユーザー情報</string>
+    <string name="user_information__button_label">編集</string>
+    <string name="user_information__success_toast">ユーザー情報を更新しました</string>
+    <string name="user_information_edit__header_title">ユーザー情報</string>
+    <string name="user_information_edit__button_label">登録</string>
+    <string name="screen__password_reset">パスワードリセット</string>
+    <string name="screen__password_update">パスワード再設定</string>
+    <string name="screen__delete_account">アカウント認証(アプリ退会_Lot退会)</string>
+    <string name="screen__delete_accountform">退会フォーム(アプリ退会)</string>
+    <string name="screen__delete_account_confirm">退会確認画面(アプリ退会)</string>
+    <string name="screen__delete_region_form">退会フォーム(Lot退会)</string>
+    <string name="screen__delete_region_confirm">退会確認画面(Lot退会)</string>
+    <string name="screen__security_settings">セキュリティ</string>
+    <string name="screen__passcode_setting">パスコード設定</string>
+    <string name="screen__charge">Lot</string>
+
+    <string name="bottom_nav__my_Tea">My Tea</string>
+    <string name="bottom_nav__unstart_Tea">Nearby Tea</string>
+    <string name="bottom_nav__history">History</string>
+    <string name="bottom_nav__mock_dummy">dummy</string>
+
+    <string name="drawer_menu__region_pay_search">Lotを探す</string>
+    <string name="drawer_menu__my_region_pay">MyLotを見る</string>
+    <string name="drawer_menu__app_setting">アプリ設定</string>
+    <string name="drawer_menu__account">アカウント情報</string>
+    <string name="drawer_menu__security">セキュリティ</string>
+    <string name="drawer_menu__password_setting">パスワード設定</string>
+    <string name="drawer_menu__push_setting">プッシュ通知設定</string>
+    <string name="drawer_menu__push_setting_on">ON</string>
+    <string name="drawer_menu__push_setting_off">OFF</string>
+    <string name="drawer_menu__location_setting">位置情報設定</string>
+    <string name="drawer_menu__others">その他</string>
+    <string name="drawer_menu__usage">使い方</string>
+    <string name="drawer_menu__faq">よくある質問</string>
+    <string name="drawer_menu__what">APPとは</string>
+    <string name="drawer_menu__tos">利用規約</string>
+    <string name="drawer_menu__privacy_policy">プライバシーポリシー</string>
+    <string name="drawer_menu__license">商標・ライセンス</string>
+    <string name="drawer_menu__unsubscribe">退会</string>
+    <string name="drawer_menu__logout">ログアウト</string>
+    <string name="drawer_menu__version">version %s</string>
+
+    <string name="delete_region_form__guidance">いつもAPPをご利用いただきまして、誠にありがとうございます。\n下記注意事項をご確認後、退会手続きにお進みください。</string>
+    <string name="delete_region_form__caution_title">Lot削除の注意</string>
+    <string name="delete_region_form__caution_text">LotLot・取引履歴の情報を元に戻すことはできません。</string>
+    <string name="delete_region_form__select_pay">削除するLotの選択</string>
+    <string name="delete_region_form__reason">削除理由</string>
+    <string name="delete_region_form__feed_back">ご意見ご感想</string>
+    <string name="delete_region_form__place_holder">入力してください</string>
+    <string name="delete_region_form__cancel">入力してください</string>
+    <string name="delete_region_form__feed_back_input_error">255文字以内で入力してください</string>
+
+    <string name="delete_region_confirm__header_title">Lot削除</string>
+    <string name="delete_region_confirm__guidance_title">Lot削除　最終確認</string>
+    <string name="delete_region_confirm__guidance_text">こちらでLot削除前の最終確認となります。\nご確認の上、Lotの退会にお進みください。</string>
+    <string name="delete_region_confirm__select_pay">削除するLot</string>
+    <string name="delete_region_confirm__reason">削除理由</string>
+    <string name="delete_region_confirm__feed_back">ご意見ご感想</string>
+    <string name="delete_region_confirm__caution_following">以下、削除前の注意事項です。</string>
+    <string name="delete_region_confirm__caution_title">Lot削除の注意</string>
+    <string name="delete_region_confirm__caution_text_one">退会後は選択された項目に関する全てのサービスが使用できなくなります。</string>
+    <string name="delete_region_confirm__caution_text_two">また、一度退会したユーザーの情報は、退会後元に戻すことはできません。</string>
+    <string name="delete_region_confirm__caution_text_three">ミニアプリにLotが残っている場合でも、全てのLotが失効となる、復元及び交換．返金・償還等はできません。</string>
+    <string name="delete_region_confirm__caution_text_four">再登録をした場合でも、以前のデータは引き継ぎできません。</string>
+    <string name="delete_region_confirm__caution_text_five">再度Lotがある場合は、再登録をしていただく必要があります。</string>
+    <string name="delete_region_confirm__agree">Lot退会の注意を確認の上、同意する</string>
+
+    <string name="delete_account_auth__header_title">Lot削除</string>
+    <string name="delete_account_auth___title">アカウント認証</string>
+    <string name="delete_account_auth___error_char_more">8文字以上で入力してください</string>
+    <string name="delete_account_auth___error_char_type">英大文字、英小文字、数字を含めて設定してください</string>
+    <string name="delete_account_auth___error_mail">メールアドレスの形式が正しくありません</string>
+
+    <string name="delete_account_form__header_title">退会</string>
+    <string name="delete_account_form__guidance">いつもAPPをご利用いただきまして、誠にありがとうございます。\n下記注意事項をご確認後、退会手続きにお進みください。</string>
+    <string name="delete_account_form__caution_title">退会の注意</string>
+    <string name="delete_account_form__caution_text">ThisAppの全ての機能が使用できなくなります。\nLotLot・取引履歴の情報を元に戻すことはできません。</string>
+    <string name="delete_account_form__reason">退会理由</string>
+    <string name="delete_account_form__feed_back">ご意見ご感想</string>
+    <string name="delete_account_form__place_holder">入力してください</string>
+    <string name="delete_account_form__feed_back_input_error">255文字以内で入力してください</string>
+
+    <string name="delete_account_confirm__header_title">退会</string>
+    <string name="delete_account_confirm__guidance_title">退会　最終確認</string>
+    <string name="delete_account_confirm__guidance_text">こちらがLotの退会前の最終確認となります。\nアプリ退会にお進みください。</string>
+    <string name="delete_account_confirm__reason">退会理由</string>
+    <string name="delete_account_confirm__feed_back">ご意見ご感想</string>
+    <string name="delete_account_confirm__caution_following">以下、退会前の注意事項です。</string>
+    <string name="delete_account_confirm__caution_title">退会の注意</string>
+    <string name="delete_account_confirm__caution_text_one">退会後は選択された項目に関する全てのサービスが使用できなくなります。</string>
+    <string name="delete_account_confirm__caution_text_two">また、一度退会したユーザーの情報は、退会後元に戻すことはできません。</string>
+    <string name="delete_account_confirm__caution_text_three">ミニアプリにLotが残っている場合でも、全てのLotが失効となる、復元及び交換．返金・償還等はできません。</string>
+    <string name="delete_account_confirm__caution_text_four">再登録をした場合でも、以前のデータは引き継ぎできません。</string>
+    <string name="delete_account_confirm__caution_text_five">再度Lotがある場合は、再登録をしていただく必要があります。</string>
+    <string name="delete_account_confirm__agree">退会注意を確認の上、同意する</string>
+
+    <string name="delete_account_complete__header_title">退会</string>
+    <string name="delete_account_complete__guidance_title">退会完了</string>
+    <string name="delete_account_complete__guidance_text">"退会が完了しました。\nご利用いただきありがとうございました。\n\nまたのご利用を、心よりお待ちしております。"</string>
+
+    <string name="button__search">検索</string>
+    <string name="button__route">経路</string>
+    <string name="button__phone">電話</string>
+    <string name="button__home_page">ホームページ</string>
+    <string name="button__sort">並べ替え</string>
+    <string name="button__filter">表示設定</string>
+
+    <string name="permission_dialog_rationale__title">権限が必要な理由</string>
+    <string name="permission_dialog_rationale__description">アプリを利用するために、権限が必要です。</string>
+    <string name="permission_dialog_rationale__confirm">OK</string>
+
+    <string name="permission_dialog_denied__title">権限が必要</string>
+    <string name="permission_dialog_denied__description">アプリを利用できません。</string>
+    <string name="permission_dialog_denied__confirm">設定画面へ</string>
+    <string name="permission_dialog_denied__dismiss">Lotトップへ</string>
+
+    <string name="transaction_history__tab_all">すべて</string>
+    <string name="transaction_history__tab_charge">Lot</string>
+    <string name="transaction_history__tab_payment">払い出し</string>
+    <string name="transaction_history__total_point">保有Lot合計</string>
+    <string name="transaction_history__empty">取引履歴がありません</string>
+    <string name="transaction_history__pay_switch">Lot\n切り替え</string>
+
+    <string name="my_region_list__campaign_name">ロット検索</string>
+    <string name="my_region_list__pay_delete">Lot削除</string>
+    <string name="my_region_list__sort">並べ替え</string>
+    <string name="my_region_list__filter">表示設定</string>
+    <string name="my_region_list__tea">ロット</string>
+    <string name="my_region_list__empty">表示できるLotがありません</string>
+    <string name="my_region_list__submit">反映する</string>
+    <string name="my_region_list__sort_new">登録が新しい順</string>
+    <string name="my_region_list__sort_old">登録が古い順</string>
+    <string name="my_region_list__sort_finish_close_up">終了間近</string>
+    <string name="my_region_list__sort_point_many">残Lotの多い順</string>
+    <string name="my_region_list__sort_point_less">残Lotの少ない順</string>
+
+    <string name="home__header">HOME</string>
+    <string name="home__my_page">MyPageへ</string>
+    <string name="home__my_page_list">リストへ</string>
+    <string name="home__my_page_search">検索へ</string>
+    <string name="home__notice">お知らせ</string>
+    <string name="home__empty_info_text">Home\nempty</string>
+    <string name="home__empty_state_appeal_text_one">Home\nempty\Text One</string>
+    <string name="home__empty_state_appeal_text_two">Home\nempty\Text Two</string>
+
+    <string name="passcode_setting__text_init">設定したいパスコードを入力してください。</string>
+    <string name="passcode_setting__text_input_confirm">確認のため、もう一度入力してください。</string>
+    <string name="passcode_setting__text_input_error">パスコードが異なります。\n再入力してください。</string>
+    <string name="passcode_setting__text_dialog_error">パスコードが異なります。\n最初からやり直してください。</string>
+
+    <string name="payment_duplicate_warning__title">重複決済の可能性があるため\n取引履歴をご確認ください</string>
+    <string name="payment_duplicate_warning__text">1時間以内に同一店舗で\nお払い出しが行われています\n\n問題ない方は決済にお進みください</string>
+    <string name="payment_duplicate_warning__confirm">払い出しに進む</string>
+    <string name="payment_duplicate_warning__dismiss">取引履歴の確認</string>
+
+    <string name="code_input__text">指定Lotを入力してください</string>
+    <string name="code_input__sub_text">指定Lotは4桁〜8桁となります。</string>
+    <string name="code_input__error">4桁以上、8桁以下で入力してください</string>
+    <string name="code_input__add_error">指定Lotが正しくありません。ご確認のうえ、もう一度入力してください</string>
+    <string name="code_input__placeholder">入力してください</string>
+
+    <string name="charge_code_input__text">Lotコードを入力してください</string>
+    <string name="charge_code_input__placeholder">xxxxx</string>
+
+    <string name="logout__confirm_dialog_title">ログアウト確認</string>
+    <string name="logout__confirm_dialog_text">ログアウトします。\nよろしいですか？</string>
+
+
+    <string-array name="region_list__prefectures">
+        <item>北海道</item>
+        <item>青森県</item>
+        <item>岩手県</item>
+        <item>宮城県</item>
+        <item>秋田県</item>
+        <item>山形県</item>
+        <item>福島県</item>
+        <item>茨城県</item>
+        <item>栃木県</item>
+        <item>群馬県</item>
+        <item>埼玉県</item>
+        <item>千葉県</item>
+        <item>東京都</item>
+        <item>神奈川県</item>
+        <item>新潟県</item>
+        <item>富山県</item>
+        <item>石川県</item>
+        <item>福井県</item>
+        <item>山梨県</item>
+        <item>長野県</item>
+        <item>岐阜県</item>
+        <item>静岡県</item>
+        <item>愛知県</item>
+        <item>三重県</item>
+        <item>滋賀県</item>
+        <item>京都府</item>
+        <item>大阪府</item>
+        <item>兵庫県</item>
+        <item>奈良県</item>
+        <item>和歌山県</item>
+        <item>鳥取県</item>
+        <item>島根県</item>
+        <item>岡山県</item>
+        <item>広島県</item>
+        <item>山口県</item>
+        <item>徳島県</item>
+        <item>香川県</item>
+        <item>愛媛県</item>
+        <item>高知県</item>
+        <item>福岡県</item>
+        <item>佐賀県</item>
+        <item>長崎県</item>
+        <item>熊本県</item>
+        <item>大分県</item>
+        <item>宮崎県</item>
+        <item>鹿児島県</item>
+        <item>沖縄県</item>
+    </string-array>
+
+    <string name="personalized__image_one">ThisAppでもっと便利に\nもっとおトクに</string>
+    <string name="personalized__image_one_description">普段の生活や旅行先で、簡単・便利に\nキャッシュレスが使えます</string>
+    <string name="walk_through_usage__image_two">利用したいLot毎に\n使える！</string>
+    <string name="walk_through_usage__image_two_description">利用したいサービスを複数登録\nまとめて管理ができます</string>
+    <string name="walk_through_usage__image_three">Lot取得も\n決済もQRコードで簡単に</string>
+    <string name="walk_through_usage__image_three_description">QRコードを使ってLotの受け取りと\nお買い物ができます</string>
+    <string name="walk_through__account_create">アカウントを作成</string>
+    <string name="walk_through__account_login">アカウントをお持ちの方</string>
+    <string name="walk_through__account_help">お困りの方はこちら</string>
+
+    <string-array name="user_information_input__gender">
+        <item>男性</item>
+        <item>女性</item>
+        <item>選択しない</item>
+    </string-array>
+
+    <string name="notification_permission__image_one">プッシュ通知をONにすると\n大事な情報が届きます</string>
+    <string name="notification_permission__image_one_description">Lotや、サービスの利用情報など\n欲しい情報がすぐ確認できます</string>
+    <string name="notification_permission__next">次へ</string>
+    <string name="notification_permission__title">プッシュ通知の許可</string>
+    <string name="notification_permission__description">プッシュ通知を受け取るための許可をお願いします</string>
+    <string name="notification_permission__allow">許可</string>
+    <string name="notification_permission__rejection">拒否</string>
+
+    <string name="walk_through__image_one">ロット追加して\nTeaAppを始めよう！</string>
+    <string name="walk_through__image_one_description">利用したいロットを選択してください</string>
+    <string name="walk_through__image_two">QRコードでLotを\nLot</string>
+    <string name="walk_through__image_two_description">発行されたQRコードを読み込んで\nLotをLotできます</string>
+    <string name="walk_through__image_three">ロットが\n確認できます</string>
+    <string name="walk_through__image_three_description">ロットを\n確認することができます</string>
+    <string name="walk_through__image_four">QRコードをスキャン\n決済完了</string>
+    <string name="walk_through__image_four_description">QRコードをスキャンし、利用金額を入力\nLotを確認して決済完了</string>
+
+    <string name="security__title">セキュリティ</string>
+    <string name="security__passcode_lock">パスコードロック</string>
+    <string name="security__description">アプリを起動する際に、4桁のパスコードを設定できます。パスコードを忘れた際は、アプリを再インストールする必要があります。</string>
+    <string name="security__enable_passcode_lock">パスコードロックを設定しました</string>
+</resources>

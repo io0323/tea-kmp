@@ -1,0 +1,37 @@
+package com.io.tea.android.ui.passcode
+
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.ui.platform.LocalLifecycleOwner
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.io.tea.android.nav.navigator.LocalNavigator
+import org.koin.androidx.compose.koinViewModel
+
+@Composable
+internal fun PasscodeSettingPage(
+    viewModel: PasscodeSettingViewModel = koinViewModel(),
+) {
+    val navigator = LocalNavigator.current
+    val lifecycleOwner = LocalLifecycleOwner.current
+    val destination by viewModel.navigationStateFlow.collectAsStateWithLifecycle(
+        lifecycleOwner
+    )
+    val passcodeSettingModel by viewModel.passcodeSettingModelModelStateFlow.collectAsStateWithLifecycle(
+        lifecycleOwner
+    )
+
+    destination?.let { dest ->
+        LaunchedEffect(dest) {
+            navigator.navigateTo(dest)
+            viewModel.completeNavigation()
+        }
+    }
+    PasscodeSettingScreen(
+        viewModel = viewModel,
+        model = passcodeSettingModel,
+        onInputComplete = viewModel::onInputComplete,
+        onInputFormClear = viewModel::onInputFormClear,
+        onDismissClick = viewModel::onDismissClick,
+    )
+}

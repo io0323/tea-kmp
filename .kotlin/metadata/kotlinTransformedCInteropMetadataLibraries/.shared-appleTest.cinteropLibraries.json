@@ -1,0 +1,27 @@
+[
+  {
+    "moduleId": "org.jetbrains.kotlinx:atomicfu:0.23.1",
+    "file": "/Users/io/Projects/GitHub/AndroidStudioProjects/TeaApp/.kotlin/metadata/kotlinTransformedCInteropMetadataLibraries/org.jetbrains.kotlinx-atomicfu-0.23.1-nativeMain-cinterop/org.jetbrains.kotlinx_atomicfu-cinterop-interop-wFq7cg.klib",
+    "sourceSetName": "nativeMain"
+  },
+  {
+    "moduleId": "io.ktor:ktor-utils:3.2.2",
+    "file": "/Users/io/Projects/GitHub/AndroidStudioProjects/TeaApp/.kotlin/metadata/kotlinTransformedCInteropMetadataLibraries/io.ktor-ktor-utils-3.2.2-iosMain-cinterop/io.ktor_ktor-utils-cinterop-threadUtils-bD5GGA.klib",
+    "sourceSetName": "iosMain"
+  },
+  {
+    "moduleId": "io.ktor:ktor-io:3.2.2",
+    "file": "/Users/io/Projects/GitHub/AndroidStudioProjects/TeaApp/.kotlin/metadata/kotlinTransformedCInteropMetadataLibraries/io.ktor-ktor-io-3.2.2-iosMain-cinterop/io.ktor_ktor-io-cinterop-mutex-xZzb1w.klib",
+    "sourceSetName": "iosMain"
+  },
+  {
+    "moduleId": "io.ktor:ktor-network:3.2.2",
+    "file": "/Users/io/Projects/GitHub/AndroidStudioProjects/TeaApp/.kotlin/metadata/kotlinTransformedCInteropMetadataLibraries/io.ktor-ktor-network-3.2.2-iosMain-cinterop/io.ktor_ktor-network-cinterop-network-oBBWEw.klib",
+    "sourceSetName": "iosMain"
+  },
+  {
+    "moduleId": "io.ktor:ktor-network:3.2.2",
+    "file": "/Users/io/Projects/GitHub/AndroidStudioProjects/TeaApp/.kotlin/metadata/kotlinTransformedCInteropMetadataLibraries/io.ktor-ktor-network-3.2.2-iosMain-cinterop/io.ktor_ktor-network-cinterop-un-oBBWEw.klib",
+    "sourceSetName": "iosMain"
+  }
+]
