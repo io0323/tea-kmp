@@ -1,12 +1,14 @@
 package com.io.tea.android.nav
 
 import android.annotation.SuppressLint
+import android.os.Build
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
@@ -37,16 +39,23 @@ internal fun AppCompositionLocal(
     }
     val lifecycleOwner = androidx.lifecycle.compose.LocalLifecycleOwner.current
     val navigateTo: @Composable () -> Unit = {
-        mainViewModel.navigateToStateFlow.collectAsStateWithLifecycle(lifecycleOwner).value?.let { dest ->
+        val navigateToValue by if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            mainViewModel.navigateToStateFlow.collectAsStateWithLifecycle(lifecycleOwner)
+        } else {
+            mainViewModel.navigateToStateFlow.collectAsState(initial = null)
+        }
+        navigateToValue?.let { dest ->
             LaunchedEffect(dest) {
                 navigator.navigateTo(dest)
                 mainViewModel.completeToNavigation()
             }
         }
     }
-    val startDestination by mainViewModel.startDestinationRoute.collectAsStateWithLifecycle(
-        lifecycleOwner
-    )
+    val startDestination by if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        mainViewModel.startDestinationRoute.collectAsStateWithLifecycle(lifecycleOwner)
+    } else {
+        mainViewModel.startDestinationRoute.collectAsState(initial = null)
+    }
 
     CompositionLocalProvider(
         LocalWindowSize provides windowSize,
