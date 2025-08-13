@@ -33,6 +33,11 @@ import androidx.compose.ui.unit.dp
 import com.io.tea.android.resource.Colors
 import com.io.tea.android.resource.theme.TeaAppTheme
 
+@Composable
+private fun rememberFocusRequesters(count: Int): List<FocusRequester> {
+    return remember { List(count) { FocusRequester() } }
+}
+
 // TODO: 認証コード(smsAuthCodes)やフォーカス位置を決めるロジックは、ViewModelに移す予定。
 @Composable
 fun AuthSmsBlock(
@@ -44,7 +49,7 @@ fun AuthSmsBlock(
     onInputFormClear: (() -> Unit?)? = null,
 ) {
     var smsAuthCodes by remember { mutableStateOf(List(smsAuthCodeLength) { "" }) }
-    val focusRequesters = remember { List(smsAuthCodeLength) { FocusRequester() } }
+    val focusRequesters = rememberFocusRequesters(smsAuthCodeLength)
     val keyboardType = when {
         isPasswordMode -> KeyboardType.NumberPassword
         else -> KeyboardType.Number
