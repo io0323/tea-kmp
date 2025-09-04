@@ -44,7 +44,9 @@ fun AuthSmsBlock(
     onInputFormClear: (() -> Unit?)? = null,
 ) {
     var smsAuthCodes by remember { mutableStateOf(List(smsAuthCodeLength) { "" }) }
-    val focusRequesters = remember { List(smsAuthCodeLength) { FocusRequester() } }
+    val focusRequesters = remember(smsAuthCodeLength) {
+        (0 until smsAuthCodeLength).map { FocusRequester() }
+    }
     val keyboardType = when {
         isPasswordMode -> KeyboardType.NumberPassword
         else -> KeyboardType.Number
