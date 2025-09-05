@@ -1,5 +1,6 @@
 package com.io.tea.android.ui.history
 
+import android.annotation.SuppressLint
 import android.os.Build
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -14,6 +15,7 @@ import com.io.tea.android.ui.history.state.TransactionHistoryUiState
 import com.io.tea.android.ui.history.state.TransactionHistoryUseCaseState
 import org.koin.androidx.compose.koinViewModel
 
+@SuppressLint("NewApi")
 @Composable
 internal fun TransactionHistoryPage(
     viewModel: HistoryViewModel = koinViewModel(),
@@ -23,6 +25,7 @@ internal fun TransactionHistoryPage(
     val destination by if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
         viewModel.navigationStateFlow.collectAsStateWithLifecycle(lifecycleOwner)
     } else {
+        // Safe fallback for API < 26
         viewModel.navigationStateFlow.collectAsState(initial = null)
     }
     val tabList by if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {

@@ -1,5 +1,6 @@
 package com.io.tea.android.ui.home
 
+import android.annotation.SuppressLint
 import android.os.Build
 import androidx.activity.compose.BackHandler
 import androidx.compose.runtime.Composable
@@ -16,6 +17,7 @@ import com.io.tea.android.ui.home.state.HomeUiState
 import com.io.tea.android.ui.home.state.HomeUseCaseState
 import org.koin.androidx.compose.koinViewModel
 
+@SuppressLint("NewApi")
 @Composable
 internal fun HomePage(
     viewModel: HomeViewModel = koinViewModel(),

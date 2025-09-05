@@ -1,5 +1,6 @@
 package com.io.tea.android.ui.login
 
+import android.annotation.SuppressLint
 import android.os.Build
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -14,6 +15,7 @@ import com.io.tea.android.ui.MainViewModel
 import com.io.tea.android.ui.login.model.LogInModel
 import org.koin.androidx.compose.koinViewModel
 
+@SuppressLint("NewApi")
 @Composable
 internal fun LogInPage(
     viewModel: LogInViewModel = koinViewModel(),

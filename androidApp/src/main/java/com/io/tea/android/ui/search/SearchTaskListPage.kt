@@ -1,5 +1,6 @@
 package com.io.tea.android.ui.search
 
+import android.annotation.SuppressLint
 import android.os.Build
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -13,6 +14,7 @@ import com.io.tea.android.ui.search.state.SearchTeaListViewModelUiState
 import org.koin.androidx.compose.koinViewModel
 import org.koin.core.parameter.parametersOf
 
+@SuppressLint("NewApi")
 @Composable
 internal fun MyRegionListPage(
     regionId: String,

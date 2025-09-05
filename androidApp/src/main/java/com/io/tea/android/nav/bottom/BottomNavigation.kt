@@ -1,5 +1,6 @@
 package com.io.tea.android.nav.bottom
 
+import android.annotation.SuppressLint
 import android.os.Build
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Icon
@@ -22,6 +23,7 @@ import com.io.tea.android.nav.navigator.LocalNavigator
 import com.io.tea.android.resource.theme.TeaAppTheme
 import org.koin.androidx.compose.koinViewModel
 
+@SuppressLint("NewApi")
 @Composable
 fun BottomBar(
     onClickBottomNavItem: OnClickBottomNavItem? = null,
