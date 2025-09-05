@@ -1,14 +1,17 @@
 package com.io.tea.android.nav
 
 import android.annotation.SuppressLint
+import android.os.Build
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -37,16 +40,25 @@ internal fun AppCompositionLocal(
     }
     val lifecycleOwner = androidx.lifecycle.compose.LocalLifecycleOwner.current
     val navigateTo: @Composable () -> Unit = {
-        mainViewModel.navigateToStateFlow.collectAsStateWithLifecycle(lifecycleOwner).value?.let { dest ->
+        val navigateToValue by if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            mainViewModel.navigateToStateFlow.collectAsStateWithLifecycle(lifecycleOwner)
+        } else {
+            // Do not access navigateToStateFlow below API 26
+            remember { mutableStateOf<Destination?>(null) }
+        }
+        navigateToValue?.let { dest ->
             LaunchedEffect(dest) {
                 navigator.navigateTo(dest)
                 mainViewModel.completeToNavigation()
             }
         }
     }
-    val startDestination by mainViewModel.startDestinationRoute.collectAsStateWithLifecycle(
-        lifecycleOwner
-    )
+    val startDestination by if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        mainViewModel.startDestinationRoute.collectAsStateWithLifecycle(lifecycleOwner)
+    } else {
+        // Do not access startDestinationRoute below API 26
+        remember { mutableStateOf<String?>(null) }
+    }
 
     CompositionLocalProvider(
         LocalWindowSize provides windowSize,

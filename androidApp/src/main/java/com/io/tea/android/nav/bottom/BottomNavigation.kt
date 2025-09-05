@@ -1,5 +1,7 @@
 package com.io.tea.android.nav.bottom
 
+import android.annotation.SuppressLint
+import android.os.Build
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
@@ -7,6 +9,7 @@ import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
@@ -20,6 +23,7 @@ import com.io.tea.android.nav.navigator.LocalNavigator
 import com.io.tea.android.resource.theme.TeaAppTheme
 import org.koin.androidx.compose.koinViewModel
 
+@SuppressLint("NewApi")
 @Composable
 fun BottomBar(
     onClickBottomNavItem: OnClickBottomNavItem? = null,
@@ -27,9 +31,13 @@ fun BottomBar(
     val viewModel: MainBottomNavViewModel = koinViewModel()
     val navController: NavController = LocalNavigator.current.navController
     val selectBottomNavRoute = BottomNavType.selectBottomNav(navController)
-    val bottomNavList by viewModel.bottomNavListModelStateFlow.collectAsStateWithLifecycle(
-        androidx.lifecycle.compose.LocalLifecycleOwner.current
-    )
+    val bottomNavList by if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        viewModel.bottomNavListModelStateFlow.collectAsStateWithLifecycle(
+            androidx.lifecycle.compose.LocalLifecycleOwner.current
+        )
+    } else {
+        viewModel.bottomNavListModelStateFlow.collectAsState(initial = emptyList())
+    }
     val defaultOnClick = remember(navController) {
         DefaultOnClickBottomNavItem(navController)
     }
