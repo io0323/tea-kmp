@@ -41,10 +41,12 @@ fun AuthSmsBlock(
     isInputFormClear: Boolean = false,
     onValueChange: (String) -> Unit = {}, // NOTE : 全入力でボタンを活性化させるケースetcで使用
     onInputComplete: (String) -> Unit = {}, // NOTE : 全入力でActionさせるケースで使用 (Unit改善余地あり)
-    onInputFormClear: (() -> Unit?)? = null,
+    onInputFormClear: (() -> Unit)? = null,
 ) {
     var smsAuthCodes by remember { mutableStateOf(List(smsAuthCodeLength) { "" }) }
-    val focusRequesters = remember(smsAuthCodeLength) { List(smsAuthCodeLength) { FocusRequester() } }
+    val focusRequesters = remember(smsAuthCodeLength) {
+        (0 until smsAuthCodeLength).map { FocusRequester() }
+    }
     val keyboardType = when {
         isPasswordMode -> KeyboardType.NumberPassword
         else -> KeyboardType.Number
