@@ -6,6 +6,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -28,7 +30,8 @@ internal fun LogInPage(
     val destination by if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
         viewModel.navigationStateFlow.collectAsStateWithLifecycle(lifecycleOwner)
     } else {
-        viewModel.navigationStateFlow.collectAsState(initial = null)
+        // Safe fallback for API < 26 - use null as initial value
+        remember { mutableStateOf<Destination?>(null) }
     }
     val model by if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
         viewModel.loginModelStateFlow.collectAsStateWithLifecycle(lifecycleOwner)

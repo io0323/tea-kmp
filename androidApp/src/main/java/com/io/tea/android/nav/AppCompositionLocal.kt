@@ -11,6 +11,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -42,7 +43,8 @@ internal fun AppCompositionLocal(
         val navigateToValue by if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             mainViewModel.navigateToStateFlow.collectAsStateWithLifecycle(lifecycleOwner)
         } else {
-            mainViewModel.navigateToStateFlow.collectAsState(initial = null)
+            // Safe fallback for API < 26 - use null as initial value
+            remember { mutableStateOf<Destination?>(null) }
         }
         navigateToValue?.let { dest ->
             LaunchedEffect(dest) {
@@ -54,7 +56,8 @@ internal fun AppCompositionLocal(
     val startDestination by if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
         mainViewModel.startDestinationRoute.collectAsStateWithLifecycle(lifecycleOwner)
     } else {
-        mainViewModel.startDestinationRoute.collectAsState(initial = null)
+        // Safe fallback for API < 26 - use null as initial value
+        remember { mutableStateOf<String?>(null) }
     }
 
     CompositionLocalProvider(
