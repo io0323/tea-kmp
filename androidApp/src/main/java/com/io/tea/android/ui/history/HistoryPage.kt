@@ -28,7 +28,7 @@ internal fun TransactionHistoryPage(
         viewModel.navigationStateFlow.collectAsStateWithLifecycle(lifecycleOwner)
     } else {
         // Do not access navigationStateFlow below API 26
-        remember { mutableStateOf<Destination?>(null) }
+        mutableStateOf<Destination?>(null)
     }
     val tabList by if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
         viewModel.tabListStateFlow.collectAsStateWithLifecycle(lifecycleOwner)
