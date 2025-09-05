@@ -19,7 +19,7 @@ import androidx.navigation.compose.rememberNavController
 import com.io.tea.android.nav.bottom.MainBottomNavViewModel
 import com.io.tea.android.nav.graph.MainNavGraph
 import com.io.tea.android.nav.navigator.LocalNavigator
-import com.io.tea.android.nav.navigator.Destination
+import com.io.tea.android.nav.Destination
 import com.io.tea.android.nav.navigator.NavigatorFactory
 import com.io.tea.android.resource.theme.TeaAppTheme
 import com.io.tea.android.ui.LocalWindowSize

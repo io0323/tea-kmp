@@ -12,7 +12,7 @@ import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.io.tea.android.nav.bottom.OnClickBottomNavItem
 import com.io.tea.android.nav.navigator.LocalNavigator
-import com.io.tea.android.nav.navigator.Destination
+import com.io.tea.android.nav.Destination
 import com.io.tea.android.ui.common.component.model.TabButtonItem
 import com.io.tea.android.ui.history.state.TransactionHistoryUiState
 import com.io.tea.android.ui.history.state.TransactionHistoryUseCaseState

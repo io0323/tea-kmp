@@ -13,7 +13,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.io.tea.android.MainActivity
 import com.io.tea.android.nav.navigator.LocalNavigator
-import com.io.tea.android.nav.navigator.Destination
+import com.io.tea.android.nav.Destination
 import com.io.tea.android.ui.MainViewModel
 import com.io.tea.android.ui.home.state.HomeDisplayState
 import com.io.tea.android.ui.home.state.HomeUiState
