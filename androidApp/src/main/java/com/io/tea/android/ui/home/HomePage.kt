@@ -29,7 +29,7 @@ internal fun HomePage(
 ) {
     val navigator = LocalNavigator.current
     val lifecycleOwner = androidx.lifecycle.compose.LocalLifecycleOwner.current
-    val destination by if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+    val destination: Destination? by if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
         viewModel.navigationStateFlow.collectAsStateWithLifecycle(lifecycleOwner)
     } else {
         // Do not access navigationStateFlow below API 26

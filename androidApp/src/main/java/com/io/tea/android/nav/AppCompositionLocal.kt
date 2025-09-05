@@ -40,7 +40,7 @@ internal fun AppCompositionLocal(
     }
     val lifecycleOwner = androidx.lifecycle.compose.LocalLifecycleOwner.current
     val navigateTo: @Composable () -> Unit = {
-        val navigateToValue by if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        val navigateToValue: Destination? by if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             mainViewModel.navigateToStateFlow.collectAsStateWithLifecycle(lifecycleOwner)
         } else {
             // Do not access navigateToStateFlow below API 26
@@ -53,7 +53,7 @@ internal fun AppCompositionLocal(
             }
         }
     }
-    val startDestination by if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+    val startDestination: String? by if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
         mainViewModel.startDestinationRoute.collectAsStateWithLifecycle(lifecycleOwner)
     } else {
         // Do not access startDestinationRoute below API 26
