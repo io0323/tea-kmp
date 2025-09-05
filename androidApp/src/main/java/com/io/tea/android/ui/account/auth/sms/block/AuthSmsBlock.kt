@@ -33,6 +33,11 @@ import androidx.compose.ui.unit.dp
 import com.io.tea.android.resource.Colors
 import com.io.tea.android.resource.theme.TeaAppTheme
 
+@Composable
+private fun rememberFocusRequesters(count: Int): List<FocusRequester> {
+    return remember(count) { List(count) { FocusRequester() } }
+}
+
 // TODO: 認証コード(smsAuthCodes)やフォーカス位置を決めるロジックは、ViewModelに移す予定。
 @Composable
 fun AuthSmsBlock(
