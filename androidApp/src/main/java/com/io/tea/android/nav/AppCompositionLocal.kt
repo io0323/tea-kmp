@@ -45,7 +45,7 @@ internal fun AppCompositionLocal(
             mainViewModel.navigateToStateFlow.collectAsStateWithLifecycle(lifecycleOwner)
         } else {
             // Do not access navigateToStateFlow below API 26
-            mutableStateOf<Destination?>(null)
+            remember { mutableStateOf<Destination?>(null) }
         }
         navigateToValue?.let { dest: Destination ->
             LaunchedEffect(dest) {
@@ -58,7 +58,7 @@ internal fun AppCompositionLocal(
         mainViewModel.startDestinationRoute.collectAsStateWithLifecycle(lifecycleOwner)
     } else {
         // Do not access startDestinationRoute below API 26
-        mutableStateOf<String?>(null)
+        remember { mutableStateOf<String?>(null) }
     }
 
     CompositionLocalProvider(

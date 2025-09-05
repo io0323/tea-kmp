@@ -33,7 +33,7 @@ internal fun MyRegionListPage(
         viewModel.navigationStateFlow.collectAsStateWithLifecycle(lifecycleOwner)
     } else {
         // Do not access navigationStateFlow below API 26
-        mutableStateOf<Destination?>(null)
+        remember { mutableStateOf<Destination?>(null) }
     }
     val useCase by if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
         viewModel.useCaseStateFlow.collectAsStateWithLifecycle(lifecycleOwner)
