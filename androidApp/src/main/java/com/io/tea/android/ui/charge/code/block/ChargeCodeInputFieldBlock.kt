@@ -43,7 +43,9 @@ import com.io.tea.android.ui.common.component.PlaceholderTextField
 internal fun ChargeCodeInputFieldBlock(
     onValueChange: (List<String>) -> Unit,
 ) {
-    val focusRequesters = remember { List(INPUT_FORMS) { FocusRequester() } }
+    val focusRequesters = remember {
+        (0 until INPUT_FORMS).map { FocusRequester() }
+    }
     var chargeCodes by remember { mutableStateOf(List(INPUT_FORMS) { "" }) }
     val strokeWidth: Dp = 1.dp
 
