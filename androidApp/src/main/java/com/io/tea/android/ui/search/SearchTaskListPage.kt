@@ -11,6 +11,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.io.tea.android.nav.navigator.LocalNavigator
+import com.io.tea.android.nav.navigator.Destination
 import com.io.tea.android.ui.search.state.MyRegionListUseCaseState
 import com.io.tea.android.ui.search.state.SearchTeaListViewModelUiState
 import org.koin.androidx.compose.koinViewModel
