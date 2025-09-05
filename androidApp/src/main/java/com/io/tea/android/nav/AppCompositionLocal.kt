@@ -43,7 +43,7 @@ internal fun AppCompositionLocal(
         val navigateToValue by if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             mainViewModel.navigateToStateFlow.collectAsStateWithLifecycle(lifecycleOwner)
         } else {
-            // Safe fallback for API < 26 - use null as initial value
+            // Avoid accessing navigateToStateFlow for API < 26
             remember { mutableStateOf<Destination?>(null) }
         }
         navigateToValue?.let { dest ->
@@ -56,7 +56,7 @@ internal fun AppCompositionLocal(
     val startDestination by if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
         mainViewModel.startDestinationRoute.collectAsStateWithLifecycle(lifecycleOwner)
     } else {
-        // Safe fallback for API < 26 - use null as initial value
+        // Avoid accessing startDestinationRoute for API < 26
         remember { mutableStateOf<String?>(null) }
     }
 

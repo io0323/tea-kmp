@@ -31,7 +31,7 @@ internal fun MyRegionListPage(
     val destination by if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
         viewModel.navigationStateFlow.collectAsStateWithLifecycle(lifecycleOwner)
     } else {
-        // Safe fallback for API < 26 - use null as initial value
+        // Avoid accessing navigationStateFlow for API < 26
         remember { mutableStateOf<Destination?>(null) }
     }
     val useCase by if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
