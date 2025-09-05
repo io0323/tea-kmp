@@ -39,7 +39,7 @@ internal fun LogInPage(
         viewModel.loginModelStateFlow.collectAsState(initial = LogInModel.default)
     }
 
-    destination?.let { dest ->
+    destination?.let { dest: Destination ->
         LaunchedEffect(dest) {
             navigator.navigateTo(dest)
             viewModel.completeNavigation()

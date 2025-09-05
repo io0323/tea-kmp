@@ -60,7 +60,7 @@ internal fun HomePage(
         // NOTE: 一旦デバイスのバックボタンを無効にしておく（ログインに戻れないように）
     }
 
-    destination?.let { dest ->
+    destination?.let { dest: Destination ->
         LaunchedEffect(dest) {
             navigator.navigateTo(dest)
             viewModel.completeNavigation()

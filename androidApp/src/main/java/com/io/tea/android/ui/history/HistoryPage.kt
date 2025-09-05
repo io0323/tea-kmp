@@ -51,7 +51,7 @@ internal fun TransactionHistoryPage(
         viewModel.uiStateFlow.collectAsState(initial = TransactionHistoryUiState(isLoad = false))
     }
 
-    destination?.let { dest ->
+    destination?.let { dest: Destination ->
         LaunchedEffect(dest) {
             navigator.navigateTo(dest)
             viewModel.completeNavigation()

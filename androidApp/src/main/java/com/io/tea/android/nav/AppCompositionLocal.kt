@@ -46,7 +46,7 @@ internal fun AppCompositionLocal(
             // Do not access navigateToStateFlow below API 26
             mutableStateOf<Destination?>(null)
         }
-        navigateToValue?.let { dest ->
+        navigateToValue?.let { dest: Destination ->
             LaunchedEffect(dest) {
                 navigator.navigateTo(dest)
                 mainViewModel.completeToNavigation()
