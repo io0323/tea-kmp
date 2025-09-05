@@ -30,7 +30,7 @@ internal fun LogInPage(
     val destination by if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
         viewModel.navigationStateFlow.collectAsStateWithLifecycle(lifecycleOwner)
     } else {
-        // Avoid accessing navigationStateFlow for API < 26
+        // Do not access navigationStateFlow below API 26
         remember { mutableStateOf<Destination?>(null) }
     }
     val model by if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
