@@ -13,6 +13,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.io.tea.android.MainActivity
 import com.io.tea.android.nav.navigator.LocalNavigator
+import com.io.tea.android.nav.Destination
 import com.io.tea.android.ui.MainViewModel
 import com.io.tea.android.ui.home.state.HomeDisplayState
 import com.io.tea.android.ui.home.state.HomeUiState
@@ -29,7 +30,7 @@ internal fun HomePage(
 ) {
     val navigator = LocalNavigator.current
     val lifecycleOwner = androidx.lifecycle.compose.LocalLifecycleOwner.current
-    val destination by if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+    val destination: Destination? by if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
         viewModel.navigationStateFlow.collectAsStateWithLifecycle(lifecycleOwner)
     } else {
         // Do not access navigationStateFlow below API 26
@@ -60,10 +61,12 @@ internal fun HomePage(
         // NOTE: 一旦デバイスのバックボタンを無効にしておく（ログインに戻れないように）
     }
 
-    destination?.let { dest ->
+    destination?.let { dest: Destination? ->
         LaunchedEffect(dest) {
-            navigator.navigateTo(dest)
-            viewModel.completeNavigation()
+            dest?.let {
+                navigator.navigateTo(it)
+                viewModel.completeNavigation()
+            }
         }
     }
 

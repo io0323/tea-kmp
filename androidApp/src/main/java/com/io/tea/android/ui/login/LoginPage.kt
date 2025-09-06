@@ -13,6 +13,7 @@ import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.io.tea.android.MainActivity
 import com.io.tea.android.nav.navigator.LocalNavigator
+import com.io.tea.android.nav.Destination
 import com.io.tea.android.ui.MainViewModel
 import com.io.tea.android.ui.login.model.LogInModel
 import org.koin.androidx.compose.koinViewModel
@@ -27,7 +28,7 @@ internal fun LogInPage(
 ) {
     val navigator = LocalNavigator.current
     val lifecycleOwner = LocalLifecycleOwner.current
-    val destination by if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+    val destination: Destination? by if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
         viewModel.navigationStateFlow.collectAsStateWithLifecycle(lifecycleOwner)
     } else {
         // Do not access navigationStateFlow below API 26
@@ -39,10 +40,12 @@ internal fun LogInPage(
         viewModel.loginModelStateFlow.collectAsState(initial = LogInModel.default)
     }
 
-    destination?.let { dest ->
+    destination?.let { dest: Destination? ->
         LaunchedEffect(dest) {
-            navigator.navigateTo(dest)
-            viewModel.completeNavigation()
+            dest?.let {
+                navigator.navigateTo(it)
+                viewModel.completeNavigation()
+            }
         }
     }
     LogInScreen(

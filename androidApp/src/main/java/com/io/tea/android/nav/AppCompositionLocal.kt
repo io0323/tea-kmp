@@ -19,6 +19,7 @@ import androidx.navigation.compose.rememberNavController
 import com.io.tea.android.nav.bottom.MainBottomNavViewModel
 import com.io.tea.android.nav.graph.MainNavGraph
 import com.io.tea.android.nav.navigator.LocalNavigator
+import com.io.tea.android.nav.Destination
 import com.io.tea.android.nav.navigator.NavigatorFactory
 import com.io.tea.android.resource.theme.TeaAppTheme
 import com.io.tea.android.ui.LocalWindowSize
@@ -40,20 +41,20 @@ internal fun AppCompositionLocal(
     }
     val lifecycleOwner = androidx.lifecycle.compose.LocalLifecycleOwner.current
     val navigateTo: @Composable () -> Unit = {
-        val navigateToValue by if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        val navigateToValue: Destination? by if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             mainViewModel.navigateToStateFlow.collectAsStateWithLifecycle(lifecycleOwner)
         } else {
             // Do not access navigateToStateFlow below API 26
             remember { mutableStateOf<Destination?>(null) }
         }
-        navigateToValue?.let { dest ->
+        navigateToValue?.let { dest: Destination ->
             LaunchedEffect(dest) {
                 navigator.navigateTo(dest)
                 mainViewModel.completeToNavigation()
             }
         }
     }
-    val startDestination by if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+    val startDestination: String? by if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
         mainViewModel.startDestinationRoute.collectAsStateWithLifecycle(lifecycleOwner)
     } else {
         // Do not access startDestinationRoute below API 26
