@@ -70,8 +70,10 @@ internal fun MyRegionListPage(
 
     destination?.let { dest: Destination? ->
         LaunchedEffect(dest) {
-            navigator.navigateTo(dest)
-            viewModel.completeNavigation()
+            dest?.let {
+                navigator.navigateTo(it)
+                viewModel.completeNavigation()
+            }
         }
     }
 
