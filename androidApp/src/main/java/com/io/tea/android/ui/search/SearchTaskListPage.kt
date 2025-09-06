@@ -68,7 +68,7 @@ internal fun MyRegionListPage(
         viewModel.isPayDeleteStateFlow.collectAsState(initial = false)
     }
 
-    destination?.let { dest: Destination ->
+    destination?.let { dest: Destination? ->
         LaunchedEffect(dest) {
             navigator.navigateTo(dest)
             viewModel.completeNavigation()
